@@ -12,4 +12,9 @@ class Tutee:
             self.stEmail is None
         else:
             self.stEmail = inputLst[3]
-        
+    
+def makeTutee(inputLst):
+    if len(inputLst) == 7:
+        return Tutee(inputLst)
+    else:
+        return None

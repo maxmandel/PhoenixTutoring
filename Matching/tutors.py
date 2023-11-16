@@ -66,6 +66,11 @@ class Tutor:
                     res.append(grade)
         return res
 
+def makeTutor(inputLst):
+    if len(inputLst) == 7:
+        return Tutor(inputLst)
+    else:
+        return None
 
 
 
