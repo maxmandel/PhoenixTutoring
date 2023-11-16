@@ -4,7 +4,7 @@ Project Idea: Matching Tutor Applicants to Enrolled Tutees
         - Tutee Enrollment Information
         - Session logistics
     Output:
-        - Tutor and Tutee objects with relevant attributes
+        - (lists of) Tutor and Tutee objects with relevant attributes
         - Matches: A list of lists of tuples, (tutee, tutor), per session
             - Algorithm should place significant weight on trying to get
             sessions as evenly sized as possible
@@ -36,10 +36,11 @@ TUTOR APPLICATION FORMAT:
     - Time A 
     - Time B 
     - Time C 
-    - Time D 
+    - Time D
+    - Tiem E 
 
     6. Subject Matter - Please rank all subject matter you are comfortable
-    tutoring
+    tutoring? (Uncomfortable, Neutral, Comfortable, Passionate?) = 0, 1, 2, 3
     - Subject A: Uncomfortable, Neutral, Comfortable, Passionate?
     - Subject B: Uncomfortable, Neutral, Comfortable, Passionate?
     - Subject C: Uncomfortable, Neutral, Comfortable, Passionate?
@@ -50,10 +51,10 @@ TUTOR APPLICATION FORMAT:
     - Subject H: Uncomfortable, Neutral, Comfortable, Passionate?
 
     7. Which grades are you comfortable tutoring?
-    - 1-3: Uncomfortable, Neutral, Comfortable
-    - 4-6: Uncomfortable, Neutral, Comfortable
-    - 7-9: Uncomfortable, Neutral, Comfortable
-    - 9-12: Uncomfortable, Neutral, Comfortable
+    - 1-3
+    - 4-6
+    - 7-9
+    - 9-12
 
     8. Qualitative/Short Answer - Please discuss your tutoring experience,
     your career orientation, major, or anything else that may be significant to
@@ -61,8 +62,77 @@ TUTOR APPLICATION FORMAT:
 
 TUTEE ENROLLMENT FORM FORMAT:
 
+Note: please use the 'enroll additional student' button to add an additional
+student's information // fill out a new form. 
+
     1. Parent name
 
     2. (Required) Parent email
 
-    3. 
+    3. Student name
+
+    4. (Optional) Student email
+
+    5. Student grade
+    - 1
+    - 2
+    - 3
+    ...
+    - other
+
+    6. What subjects would you like your child to recieve tutoring in?
+    (RANK: at most 4)
+    - Subject A
+    - Subject B
+    ...
+    (exhaustive list, seperate items for each language, etc.)
+
+    7. Timing - Please select all days/times that work for you (be exhaustive)
+    - Time A (in-person)
+    - Time B (in-person)
+    - Time C (virtual)
+    - Time D (virtual)
+    - Time E (virtual)
+
+    8. (string/short answer) Did you have a previous tutor with whom you'd like
+    to work again? Please write their name here and we will do our best to
+    rematch you if scheduling aligns. (note, please only write their name .. 
+    string parsing .. etc)
+
+    9. (short answer) Preferences/requirements for your student we should know
+    about?
+
+    10. (short answer) Feedback
+
+
+Project sketch
+- produce tutor/tutee objects with attributes from Inputs
+- write a function taking in a two lists, of tutee and tutor objects, and
+returning paired tuples, PQs by tutee index
+- second function taking tutee/tutor pairings list and session coordinator/
+org logistics information and outputting email lists, email templates, etc.
+
+Weights:
+
+    Day/time, availability, is the highest weighted element in matching.
+
+    Secondarily we're concerned with an alignment on subject matter, especially
+    for the rare student with a unique subject requirement, i.e. Mandarin,
+    Physics, Biology, etc.
+
+    Here we should check if the tutee has requested a returning tutor. With some
+    simple string parsing, we can check through the list of all tutor applicant
+    names.
+
+    Third we're going to try to make sure tutors are with tutees of an age/
+    grade-level they are comfortable working with.
+
+    Fifth, if there are still multiple options for tutors at this point in
+    filtration, we should look at experience, attitude, and perhaps seniority.
+    Previous experience with PT may be weighed more highly.
+
+
+
+
+    
+
