@@ -1,0 +1,68 @@
+Project Idea: Matching Tutor Applicants to Enrolled Tutees
+    Inputs:
+        - Tutor Applications
+        - Tutee Enrollment Information
+        - Session logistics
+    Output:
+        - Tutor and Tutee objects with relevant attributes
+        - Matches: A list of lists of tuples, (tutee, tutor), per session
+            - Algorithm should place significant weight on trying to get
+            sessions as evenly sized as possible
+        - Priority Queues: for each tutee, a priority queue of tutors, matched
+        and unmatched (with unmatched getting higher priority by some scalar),
+        to potentially replace the tutor for a given tutee (in case someone
+        rejects the match or drops out)
+        - Some analytics:
+            - most in-demand subject: max{demand}
+            - most in-supply subject: max{supply}
+            - 'unicorn' subjects: min{(supply/demand)}
+            - overrepresented subject: max{(supply/demand)}
+            - Most popular day(s) (by how much)
+            - Most popular time(s) (include informational/opinion questions)
+            - Most popular format (by how much) (and why?)
+        - Session coordinator email lists and templates
+
+TUTOR APPLICATION FORMAT:
+
+    1. Your name:
+
+    2. Your year:
+
+    3. (Required) Your email:
+
+    4. (Optional) Your phone number:
+
+    5. Timing - Please select all days/times that work for you (be exhaustive)
+    - Time A 
+    - Time B 
+    - Time C 
+    - Time D 
+
+    6. Subject Matter - Please rank all subject matter you are comfortable
+    tutoring
+    - Subject A: Uncomfortable, Neutral, Comfortable, Passionate?
+    - Subject B: Uncomfortable, Neutral, Comfortable, Passionate?
+    - Subject C: Uncomfortable, Neutral, Comfortable, Passionate?
+    - Subject D: Uncomfortable, Neutral, Comfortable, Passionate?
+    - Subject E: Uncomfortable, Neutral, Comfortable, Passionate?
+    - Subject F: Uncomfortable, Neutral, Comfortable, Passionate?
+    - Subject G: Uncomfortable, Neutral, Comfortable, Passionate?
+    - Subject H: Uncomfortable, Neutral, Comfortable, Passionate?
+
+    7. Which grades are you comfortable tutoring?
+    - 1-3: Uncomfortable, Neutral, Comfortable
+    - 4-6: Uncomfortable, Neutral, Comfortable
+    - 7-9: Uncomfortable, Neutral, Comfortable
+    - 9-12: Uncomfortable, Neutral, Comfortable
+
+    8. Qualitative/Short Answer - Please discuss your tutoring experience,
+    your career orientation, major, or anything else that may be significant to
+    your profile as an applicant.
+
+TUTEE ENROLLMENT FORM FORMAT:
+
+    1. Parent name
+
+    2. (Required) Parent email
+
+    3. 
