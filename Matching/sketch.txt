@@ -112,6 +112,17 @@ returning paired tuples, PQs by tutee index
 - second function taking tutee/tutor pairings list and session coordinator/
 org logistics information and outputting email lists, email templates, etc.
 
+Data cleaning
+- will need to clean up the input data: shouldn't ask every tutor to put down
+'0' for subjects unwilling to tutor, so maybe we fill in blanks with 0 so the
+numerical comparison works
+- the form itself needs to have specific times (i.e. "Wednesday, 
+4:30-6:00pm CT") for tutor convenience and clarity, but our internal comparisons
+will be simplified by changing every instance of the specific to a simple code,
+i.e. "WED". Same idea for subject names.
+- This is not a major issue - whatever we'd like to input can be run through a
+simple wrapper to make these changes
+
 Weights:
 
     Day/time, availability, is the highest weighted element in matching.
