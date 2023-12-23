@@ -37,8 +37,7 @@ class Tutee:
 
         self.grade = int(inputLst[4])
         
-
-        
+    
     
 def makeTutee(inputLst):
     if len(inputLst) == 9:
