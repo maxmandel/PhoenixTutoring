@@ -63,7 +63,7 @@ TUTOR APPLICATION FORMAT:
 TUTEE ENROLLMENT FORM FORMAT:
 
 Note: please use the 'enroll additional student' button to add an additional
-student's information // fill out a new form. 
+student's information or fill out a new form. 
 
     1. Parent name
 

@@ -41,6 +41,7 @@ class Tutor:
             else:
                 sbdict[sblst[i]] = int(sblst[i+1]) # subject-ranking dictionary
         self.subjects = sbdict
+        self.allsubjects = sbdict.keys()
 
         grades = inputLst[5].split(",")
         glst = []
