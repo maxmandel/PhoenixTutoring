@@ -1,4 +1,6 @@
 
+# type inputList = list[str]
+
 class Tutor:
     """
     A class to represent a tutor applicant. 
@@ -67,10 +69,31 @@ class Tutor:
         return (day in self.available)
 
 def makeTutor(inputLst):
+    """
+    Inputs:
+        inputLst: List[str]
+    Returns: Tutor
+
+    Creates a Tutor object from a legitimate input list, otherwise returns None.
+    """
     if len(inputLst) == 7:
         return Tutor(inputLst)
     else:
         return None
+    
+def makeTutors(inputLsts):
+    """
+    Inputs:
+        inputLsts: List[List[str]]
+    Returns: List[Tutor]
+
+    Takes a list of legitimate input lists and produces a list of tutor objects.
+    """
+    lstTuts = []
+    for il in inputLsts:
+        lstTuts.append(makeTutor(il))
+    return lstTuts
+
 
 
 
