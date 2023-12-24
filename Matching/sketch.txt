@@ -37,7 +37,7 @@ TUTOR APPLICATION FORMAT:
     - Time B 
     - Time C 
     - Time D
-    - Tiem E 
+    - Time E 
 
     6. Subject Matter - Please rank all subject matter you are comfortable
     tutoring? (Uncomfortable, Neutral, Comfortable, Passionate?) = 0, 1, 2, 3
